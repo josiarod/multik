@@ -1,7 +1,7 @@
 package main
 
-import "fmt"
+import "github.com/josiarod/multik/internal/cli"
 
 func main() {
-	fmt.Println("multik CLI - WIP")
+	cli.Execute()
 }
