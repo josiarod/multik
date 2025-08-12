@@ -1,13 +1,13 @@
 .PHONY: build test lint run
 
 build:
-   go build -o bin/multik ./cmd/multik
+	go build -o bin/multik ./cmd/multik
 
 test:
-   go test ./... -race -count=1
+	go test ./... -race -count=1
 
 lint:
-   golangci-lint run || true
+	golangci-lint run || true
 
 run:
-   go run ./cmd/multik
+	go run ./cmd/multik
