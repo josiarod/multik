@@ -16,6 +16,7 @@ func NewRootCmd() *cobra.Command {
 		Long:  "multik: query multiple kubernetes clusters in parallel and agregate results.",
 	}
 	cmd.AddCommand(versionCmd())
+	cmd.AddCommand(contextsCmd())
 	return cmd
 }
 

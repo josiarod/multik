@@ -7,10 +7,6 @@ import (
 	"github.com/spf13/cobra"
 )
 
-func init() {
-	NewRootCmd().AddCommand(contextsCmd())
-}
-
 func contextsCmd() *cobra.Command {
 	return &cobra.Command{
 		Use:   "contexts",
