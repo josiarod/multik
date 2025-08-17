@@ -29,13 +29,13 @@ func PodDescribeText(items []types.PodDescribe, errs []ErrItem) string {
 		fmt.Fprintf(&b, "Namespace: %s\n", d.Namespace)
 		fmt.Fprintf(&b, "Name: %s\n", d.Name)
 		fmt.Fprintf(&b, "Node: %s\n", d.Node)
-		fmt.Fprintf(&b, "Status: %s (Ready %s, Restarts %d, Age%s)\n",
+		fmt.Fprintf(&b, "Status: %s (Ready %s, Restarts %d, Age %s)\n",
 			d.Status, d.Ready, d.Restarts, humanAge(d.Age))
 		if d.IP != "" {
 			fmt.Fprintf(&b, "Pod IP:     %s\n", d.IP)
 		}
 		if d.QoSClass != "" {
-			fmt.Fprintf(&b, "QoS:        %\n", d.QoSClass)
+			fmt.Fprintf(&b, "QoS:        %s\n", d.QoSClass)
 		}
 		b.WriteString("Containers:\n")
 		for _, c := range d.Containers {
